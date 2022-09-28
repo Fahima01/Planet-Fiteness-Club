@@ -1,0 +1,14 @@
+.activity-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+
+    height: 100vh;
+}
+
+.list-activity {
+    background-color: #71c2c22f;
+}
+
+.activity-detail {
+    background-color: #ffffff;
+}

@@ -1,9 +1,10 @@
 import './App.css';
+import Activities from './Components/Activites/Activities';
 
 function App() {
   return (
-    <div className="App">
-      <h3>I have changed the app.js</h3>
+    <div>
+      <Activities></Activities>
     </div>
   );
 }
