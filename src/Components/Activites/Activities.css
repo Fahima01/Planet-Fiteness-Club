@@ -1,14 +1,65 @@
 .activity-container {
     display: grid;
     grid-template-columns: 4fr 1fr;
-
-    height: 100vh;
 }
 
 .list-activity {
     background-color: #71c2c22f;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 50px;
+    padding: 50px;
+
 }
 
 .activity-detail {
     background-color: #ffffff;
+}
+
+.player {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+
+}
+
+.player img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    background-color: rgba(95, 158, 160, 0.247);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn-group button {
+    background-color: #ffffff;
+    color: #0a7f7d;
+    border: none;
+    border-radius: 50px;
+    padding: 15px;
+
+}
+
+.btn-group button:hover {
+    background-color: #0a7f7d;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+    color: #fff;
+}
+
+.time-count {
+    background-color: rgba(95, 158, 160, 0.247);
+    border-radius: 15px;
+    font-weight: 600;
+    padding: 2px 20px;
+    margin-bottom: 15px;
 }
