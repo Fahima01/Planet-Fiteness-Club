@@ -23,7 +23,7 @@ const Activities = () => {
     }, []);
 
     const handleAddActivity = (activity) => {
-        console.log(activity)
+        //console.log(activity)
         const newActivity = [...selectedActivity, activity];
         setSelectedActivity(newActivity);
     }

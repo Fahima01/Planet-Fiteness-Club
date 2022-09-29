@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './Board.css';
 
-const Board = ({ selectedActivity }) => {
+const Board = (props) => {
+    const { selectedActivity } = props;
+    console.log(selectedActivity)
+
+
+    const [selectBreak, setSelectBreak] = useState()
+
+    const setTime = () => {
+        setSelectBreak('10');
+    }
+    let totalSecond = 0;
+
+    for (const activity of selectedActivity) {
+        totalSecond = totalSecond + activity.time;
+    }
     return (
-        <div>
+        <div className='board-display'>
             <div class="player">
                 <div>
                     <img src="../../Images/player-5.png" alt="" />
@@ -31,7 +46,7 @@ const Board = ({ selectedActivity }) => {
             </div>
             <h3>Add a break {selectedActivity.length}</h3>
             <div className='btn-group'>
-                <button>10s</button>
+                <button onClick={setTime}>10s</button>
                 <button>20s</button>
                 <button>30s</button>
                 <button>40s</button>
@@ -40,10 +55,10 @@ const Board = ({ selectedActivity }) => {
             <h3>Exercise Details</h3>
             <div>
                 <div className='time-count'>
-                    <p>Exercise time  </p>
+                    <p>Exercise time: <span> {totalSecond} <small>seconds</small></span>  </p>
                 </div>
                 <div className='time-count'>
-                    <p>Break time  </p>
+                    <p>Break time {selectBreak} </p>
                 </div>
             </div>
         </div>
