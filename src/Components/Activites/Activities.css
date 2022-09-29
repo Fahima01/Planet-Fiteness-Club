@@ -104,3 +104,37 @@
     gap: 20px;
 
 }
+
+@media screen and (max-width: 480px) {
+    .activity-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .list-activity {
+        display: grid;
+        grid-template-columns: 1fr
+    }
+}
+
+.blog {
+    margin: 50px;
+    padding: 30px;
+    border: 1px solid lightblue;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 10px 10px 78px -33px rgb(176, 168, 242);
+
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    .activity-container {
+        display: grid;
+        grid-template-columns: 2fr;
+    }
+
+    .list-activity {
+        display: grid;
+        grid-template-columns: 2fr;
+    }
+}

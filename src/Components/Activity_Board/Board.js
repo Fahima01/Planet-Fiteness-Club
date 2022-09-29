@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import './Board.css';
+import img from '../../Images/player-5.png';
 
 const Board = (props) => {
     const { selectedActivity } = props;
-    console.log(selectedActivity)
 
-
+    // add break time
     const [selectBreak, setSelectBreak] = useState()
 
     const setTime1 = () => {
-        setSelectBreak('10');
+        setSelectBreak('10')
+        localStorage.setItem('yes');
     }
     const setTime2 = () => {
         setSelectBreak('20');
@@ -24,11 +25,7 @@ const Board = (props) => {
         setSelectBreak('50');
     }
 
-
-
-
-
-
+    // add exercise time
     let totalSecond = 0;
 
     for (const activity of selectedActivity) {
@@ -38,11 +35,11 @@ const Board = (props) => {
         <div className='board-display'>
             <div class="player">
                 <div>
-                    <img src="../../Images/player-5.png" alt="" />
+                    <img src={img} alt="" />
                 </div>
                 <div>
-                    <h3 class="players-name">John Smith</h3>
-                    <p>Sydney, Austrelia</p>
+                    <h3 class="players-name">Hanry Jhon</h3>
+                    <p>Dhaka, Bangladesh</p>
                 </div>
             </div>
             <div className='player-details'>

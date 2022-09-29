@@ -3,16 +3,19 @@ import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeartbeat } from '@fortawesome/free-solid-svg-icons'
 
-import "../../Images/player-5.png"
 import Activity from '../Activity/Activity';
 import './Activities.css'
 import Board from '../Activity_Board/Board';
+import { addToDb } from '../../utilities/fakedb';
+import Qna from '../Blog/Qna';
+
 
 
 const Activities = () => {
 
     const [activities, setActivities] = useState([])
     const [selectedActivity, setSelectedActivity] = useState([])
+    // const [buttonText, setButtonText] = useState('Click');
 
     useEffect(() => {
 
@@ -26,6 +29,8 @@ const Activities = () => {
         //console.log(activity)
         const newActivity = [...selectedActivity, activity];
         setSelectedActivity(newActivity);
+        // setButtonText('New text');
+        addToDb(activity.id)
     }
 
     return (
@@ -44,14 +49,13 @@ const Activities = () => {
                         ></Activity>)
                     }
                 </div>
-
-
-
                 <div className='activity-detail'>
                     <Board selectedActivity={selectedActivity}></Board>
                 </div>
             </div>
-
+            <div className='blog'>
+                <Qna></Qna>
+            </div>
         </div>
     );
 };
