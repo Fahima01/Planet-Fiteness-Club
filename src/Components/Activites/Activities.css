@@ -82,7 +82,16 @@
 }
 
 .time-count {
-    background-color: rgba(95, 158, 160, 0.247);
+    background-color: #0a7f7d;
+    border-radius: 15px;
+    font-weight: 600;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.complete-acti {
+    background-color: #5f9ea03f;
     border-radius: 15px;
     font-weight: 600;
     padding: 15px 20px;
@@ -95,7 +104,7 @@
     margin: auto;
     align-items: center;
     justify-content: center;
-    background-color: rgba(95, 158, 160, 0.247);
+    background-color: #5f9ea03f;
     border-radius: 15px;
     font-weight: 600;
     padding: 15px 0px;

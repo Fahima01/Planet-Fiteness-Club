@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Board.css';
 import img from '../../Images/player-5.png';
 
@@ -6,11 +6,15 @@ const Board = (props) => {
     const { selectedActivity } = props;
 
     // add break time
-    const [selectBreak, setSelectBreak] = useState()
+    const [selectBreak, setSelectBreak] = useState();
+    useEffect(() => {
+        const localstorageData = localStorage.getItem(setSelectBreak)
+        console.log(localstorageData)
+    }, []);
+
 
     const setTime1 = () => {
         setSelectBreak('10')
-        localStorage.setItem('yes');
     }
     const setTime2 = () => {
         setSelectBreak('20');
@@ -74,6 +78,9 @@ const Board = (props) => {
                 </div>
                 <div className='time-count'>
                     <p>Break time: {selectBreak} seconds </p>
+                </div>
+                <div className='complete-acti'>
+                    <p>Activity Completed</p>
                 </div>
             </div>
         </div>
